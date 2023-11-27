@@ -18,7 +18,7 @@ async def root():
 
 #@app.get("/predict/")
 #def predict():
-#    return classifier('I like cats!')[0]
+#    return classifier('I like dogs!')[0]
 
 
 @app.post("/predict/")
