@@ -24,3 +24,11 @@ def test_predict_negative():
     json_data = response.json()
     assert response.status_code == 200
     assert json_data[0]["label"] == 'anger'
+
+def test_predict_desire():
+    response = client.post("/predict/",
+                           json={"text": "I want pizza"})
+    json_data = response.json()
+    assert response.status_code == 200
+    assert json_data[0]["label"] == 'desire'
+
